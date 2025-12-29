@@ -1,0 +1,11 @@
+---
+applications:
+- name: excel-file-viewer
+  memory: 1G
+  disk_quota: 1024M
+  instances: 1
+  buildpacks:
+    - nodejs_buildpack
+  command: npm run build && npm start
+  env:
+    NODE_ENV: production
